@@ -13,6 +13,7 @@
         <module>serviceA</module>
         <module>serviceB</module>
         <module>eureka-server</module>
+        <module>zuul</module>
     </modules>
 
     <properties>

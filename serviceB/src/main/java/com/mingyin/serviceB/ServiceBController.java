@@ -12,15 +12,11 @@ public class ServiceBController {
     @Autowired
     private ServiceAClient serviceA;
 
-    @RequestMapping(value = "/sayHello/{id}", method = RequestMethod.GET)
+
+   @RequestMapping(value = "/sayHello/{id}", method = RequestMethod.GET)
     public String greeting(@PathVariable("id") Long id,
                            @RequestParam("name") String name,
                            @RequestParam("age") Integer age) {
-        return serviceA.sayHello(id, name, age);
-    }
-    @RequestMapping(value = "/sayBye/{id}", method = RequestMethod.GET)
-    public String greeting(@PathVariable("id") Long id,
-                           @RequestParam("name") String name, {
         return serviceA.sayHello(id, name, age);
     }
 

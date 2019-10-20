@@ -4,3 +4,7 @@ eureka:
   client:
     registerWithEureka: false
     fetchRegistry: false
+    service-url:
+      defaultZone: http://peer1:8761/eureka/
+  instance:
+    hostname: peer1

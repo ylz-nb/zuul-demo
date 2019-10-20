@@ -11,16 +11,18 @@ import com.mingyin.api.User;
 @RestController
 public class ServiceAController implements ServiceAInterface {
 
-    public String sayHello(@PathVariable("id") Long id,
+   public String sayHello(@PathVariable("id") Long id,
                            @RequestParam("name") String name,
                            @RequestParam("age") Integer age) {
         System.out.println("打招呼，id=" + id + ", name=" + name + ", age=" + age);
         return "{'msg': 'hello, " + name + "'}";
     }
-    public String sayBye(String id,String name){
+
+/*    @Override
+    public String sayBye(Long id, String name, Integer age) {
         System.out.println("再见, id="+id+",name="+name+"" );
         return "{'msg': 'byebye, "+name+"'}";
-    }
+    }*/
 
     public String createUser(@RequestBody User user) {
         System.out.println("创建用户，" + user);

@@ -9,14 +9,16 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/user")
 public interface ServiceAInterface {
 
-    @RequestMapping(value = "/sayHello/{id}", method = RequestMethod.GET)
+   @RequestMapping(value = "/sayHello/{id}", method = RequestMethod.GET)
     String sayHello(@PathVariable("id") Long id,
                     @RequestParam("name") String name,
                     @RequestParam("age") Integer age);
+/*
     @RequestMapping(value = "/sayBye/{id}", method = RequestMethod.GET)
-    String sayHello(@PathVariable("id") Long id,
+    String sayBye(@PathVariable("id") Long id,
                     @RequestParam("name") String name,
                     @RequestParam("age") Integer age);
+*/
 
     @RequestMapping(value = "/", method = RequestMethod.POST)
     String createUser(@RequestBody User user);
